@@ -64,7 +64,7 @@ function App() {
       <Header favorites={currentFavorites} />
       <div className="d-flex w-auto my-5">
         <Routes>
-          <Route path="/" Component={Login} />
+          <Route path="/moviedb-react-alkemy" Component={Login} />
           <Route
             path="/list"
             Component={() => (
