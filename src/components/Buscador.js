@@ -33,7 +33,7 @@ export default function Buscador() {
         </label>
       </div>
       <button className="btn btn-success" type="submit">
-        Buscar
+        Search
       </button>
     </form>
   );
