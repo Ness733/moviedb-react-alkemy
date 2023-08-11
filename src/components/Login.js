@@ -44,7 +44,10 @@ function Login() {
     axios
       .post("http://challenge-react.alkemy.org", { email, password })
       .then((res) => {
+        console.log(res);
+
         const tokenRecibido = res.data.token;
+        console.log(tokenRecibido);
         sessionStorage.setItem("token", tokenRecibido);
         navigation("/list");
         Swal({
@@ -57,17 +60,16 @@ function Login() {
   };
 
   const token = sessionStorage.getItem("token");
+  console.log(token);
 
-  return token ? (
-    <Navigate replace to="/list" />
-  ) : (
+  return (
     <>
       <div
         className="d-flex flex-column align-items-center mt-5 w-100"
         style={{ height: "78vh" }}
       >
         <h2 className="w-50">Formulario de login</h2>
-        <form className="w-50" onSubmit={() => submitHandler}>
+        <form className="w-50" onSubmit={submitHandler}>
           <div className="mb-3">
             <label className="form-label">
               <span>Correo Electrónico:</span>
