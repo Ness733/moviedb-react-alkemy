@@ -1,6 +1,6 @@
 import axios from "axios";
 import Swal from "sweetalert";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const navigation = useNavigate();
@@ -68,11 +68,11 @@ function Login() {
         className="d-flex flex-column align-items-center mt-5 w-100"
         style={{ height: "78vh" }}
       >
-        <h2 className="w-50">Formulario de login</h2>
+        <h2 className="w-50">Login</h2>
         <form className="w-50" onSubmit={submitHandler}>
           <div className="mb-3">
             <label className="form-label">
-              <span>Correo Electrónico:</span>
+              <span>Email:</span>
               <input
                 className="form-control"
                 id="exampleInputEmail1"
@@ -85,7 +85,7 @@ function Login() {
           </div>
           <div className="mb-3">
             <label className="form-label">
-              <span>Contraseña:</span>
+              <span>Password:</span>
               <input
                 className="form-control"
                 id="exampleInputPassword1"
