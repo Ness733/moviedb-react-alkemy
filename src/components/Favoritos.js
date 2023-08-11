@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 
 export default function Favoritos(props) {
-  const token = sessionStorage.getItem("token");
+  // const token = sessionStorage.getItem("token");
   return (
     <>
       <div>

@@ -6,6 +6,7 @@ export default function Buscador() {
   const submitHandler = (e) => {
     e.preventDefault();
     const keyword = e.target.keyword.value.trim();
+    console.log(keyword);
 
     if (keyword.length < 4) {
       Swal({

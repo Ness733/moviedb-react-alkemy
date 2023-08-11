@@ -67,9 +67,9 @@ function Login() {
         style={{ height: "78vh" }}
       >
         <h2 className="w-50">Formulario de login</h2>
-        <form className="w-50" onSubmit={submitHandler}>
+        <form className="w-50" onSubmit={() => submitHandler}>
           <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">
+            <label className="form-label">
               <span>Correo Electrónico:</span>
               <input
                 className="form-control"
@@ -82,7 +82,7 @@ function Login() {
             </label>
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
+            <label className="form-label">
               <span>Contraseña:</span>
               <input
                 className="form-control"

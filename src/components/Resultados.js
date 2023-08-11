@@ -4,13 +4,15 @@ import Swal from "sweetalert";
 import { Link } from "react-router-dom";
 
 export default function Resultados() {
-  const query = new URLSearchParams(window.location.search);
+  const query = new URLSearchParams(window.location.hash.slice(10));
+  console.log(query);
   const searchResult = query.get("search");
   const [moviesResult, setMoviesResults] = useState([]);
   const imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
   const SEARCH_ENDPOINT = "https://api.themoviedb.org/3/search/movie?";
   const API_KEY = "api_key=37676cbbe16adc2c98d10e0710834b85&";
   const SEARCH_QUERY = `&query=${searchResult}`;
+  console.log(SEARCH_QUERY);
 
   useEffect(() => {
     const endPoint = SEARCH_ENDPOINT + API_KEY + SEARCH_QUERY;
