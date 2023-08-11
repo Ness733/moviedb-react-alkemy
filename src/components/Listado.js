@@ -26,9 +26,7 @@ function Listado({ favorites, currentFavorites }) {
         });
       });
   }, [currentFavorites]);
-  return !token ? (
-    <Navigate replace to="/" />
-  ) : (
+  return (
     <>
       <div className="row pb-5 w-100 mx-3 justify-content-center">
         <h2 className="text-center">Featured</h2>

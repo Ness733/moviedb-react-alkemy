@@ -3,9 +3,7 @@ import { Navigate } from "react-router-dom";
 
 export default function Favoritos(props) {
   const token = sessionStorage.getItem("token");
-  return !token ? (
-    <Navigate replace to="/" />
-  ) : (
+  return (
     <>
       <div>
         <div className="row pb-5 w-100 mx-3 justify-content-center">
