@@ -44,15 +44,15 @@ function Login() {
     axios
       .post("http://challenge-react.alkemy.org", { email, password })
       .then((res) => {
+        const tokenRecibido = res.data.token;
+        sessionStorage.setItem("token", tokenRecibido);
+        navigation("/list");
         Swal({
           title: "Success!",
           text: "Successful login!",
           icon: "success",
           button: "Okay!",
         });
-        const tokenRecibido = res.data.token;
-        sessionStorage.setItem("token", tokenRecibido);
-        navigation("/list");
       });
   };
 
