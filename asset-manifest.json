@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/moviedb-react-alkemy/static/css/main.83b8bf0d.css",
-    "main.js": "/moviedb-react-alkemy/static/js/main.e6d9a02f.js",
+    "main.js": "/moviedb-react-alkemy/static/js/main.975a6e64.js",
     "index.html": "/moviedb-react-alkemy/index.html",
     "main.83b8bf0d.css.map": "/moviedb-react-alkemy/static/css/main.83b8bf0d.css.map",
-    "main.e6d9a02f.js.map": "/moviedb-react-alkemy/static/js/main.e6d9a02f.js.map"
+    "main.975a6e64.js.map": "/moviedb-react-alkemy/static/js/main.975a6e64.js.map"
   },
   "entrypoints": [
     "static/css/main.83b8bf0d.css",
-    "static/js/main.e6d9a02f.js"
+    "static/js/main.975a6e64.js"
   ]
 }
