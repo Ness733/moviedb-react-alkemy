@@ -1,7 +1,7 @@
 {
   "name": "react-skill-up",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://ness733.github.io/moviedb-react-alkemy",
   "dependencies": {
     "@sweetalert/with-react": "^0.1.1",
