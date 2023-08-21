@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import Buscador from "./Buscador";
-
 import "../css/bootstrap.min.css";
 
-function Header(props) {
+function Header() {
   return (
     <header>
       <nav
@@ -31,9 +30,9 @@ function Header(props) {
               </Link>
             </li>
             <li>
-              {props.favorites.length > 0 && (
-                <span className="favCounter">{props.favorites.length}</span>
-              )}
+              {/* {counter.length > 0 && (
+                <span className="favCounter">{counter.length}</span>
+              )} */}
             </li>
           </ul>
           <Buscador />

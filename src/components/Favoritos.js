@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-// import { Navigate } from "react-router-dom";
 
-export default function Favoritos(props) {
-  // const token = sessionStorage.getItem("token");
+import useMovies from "../hooks/useMovies";
+
+export default function Favoritos() {
+  const { currentFavorites, favorites } = useMovies();
   return (
     <>
       <div>
         <div className="row pb-5 w-100 mx-3 justify-content-center">
-          {!props.currentFavorites.length && (
+          {!currentFavorites.length && (
             <div className="text-center">
               There are no favorite items yet...
             </div>
           )}
-          {props.currentFavorites.map((movie, index) => {
+          {currentFavorites.map((movie, index) => {
             return (
               <div
                 key={index}
@@ -27,9 +28,9 @@ export default function Favoritos(props) {
                 <button
                   className="favourite-btn"
                   data-id={movie.id}
-                  onClick={props.favorites}
+                  onClick={favorites}
                 >
-                  {props.currentFavorites.find((mov) => mov.id === movie.id) ? (
+                  {currentFavorites.find((mov) => mov.id === movie.id) ? (
                     <i className="bi-balloon-heart-fill" />
                   ) : (
                     <i className="bi-balloon-heart" />

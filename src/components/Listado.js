@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert";
+import useMovies from "../hooks/useMovies";
 
-function Listado({ favorites, currentFavorites }) {
+function Listado() {
   // const token = sessionStorage.getItem("token");
+  const { favorites, currentFavorites } = useMovies();
   const imgPath = "https://image.tmdb.org/t/p/w300_and_h450_bestv2";
   const [moviesList, setMoviesList] = useState([]);
-  console.log(moviesList);
   useEffect(() => {
     const endPoint =
       "https://api.themoviedb.org/3/discover/movie?api_key=37676cbbe16adc2c98d10e0710834b85&page=1";
@@ -25,7 +26,7 @@ function Listado({ favorites, currentFavorites }) {
           button: "Okay!",
         });
       });
-  }, [currentFavorites]);
+  }, []);
   return (
     <>
       <div className="row pb-5 w-100 mx-3 justify-content-center">
